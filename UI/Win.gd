@@ -1,0 +1,16 @@
+extends Control
+
+
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	$Label.text = "You Win! Your score was "+str(Global.score)
+
+
+func _on_quit_pressed():
+	
+	get_tree().change_scene("res://Game.tscn")
+	Global.reset()
+
+
+func _on_play_pressed():
+	get_tree().quit()

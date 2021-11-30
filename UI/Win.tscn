@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/Win.gd" type="Script" id=1]
+
+[node name="Win" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0823529, 0.376471, 0.717647, 1 )
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "You Died!"
+align = 1
+valign = 1
+
+[node name="play" type="Button" parent="."]
+margin_left = 462.0
+margin_top = 350.0
+margin_right = 562.0
+margin_bottom = 370.0
+text = "Play Again?"
+
+[node name="quit" type="Button" parent="."]
+margin_left = 462.0
+margin_top = 400.0
+margin_right = 562.0
+margin_bottom = 420.0
+text = "Quit"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
